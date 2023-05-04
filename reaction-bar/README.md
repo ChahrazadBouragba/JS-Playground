@@ -15,10 +15,7 @@ You can also reset the count of all reactions to zero by clicking on the "Reset 
 
 ## Installation
 
-To install the reaction bar project, simply clone the repository to your local machine using the following command:
-
-git clone https://github.com/your-username/reaction-bar.git
-Then, open the index.html file in your web browser to view the project.
+To install the reaction bar project, simply clone the repository to your local machine. Then, open the index.html file in your web browser to view the project.
 
 ## Contributions
 Contributions to the reaction bar project are welcome! If you find a bug or have a suggestion for improvement, please open an issue or submit a pull request to the project's GitHub repository.
