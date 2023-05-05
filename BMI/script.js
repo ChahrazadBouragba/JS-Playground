@@ -13,8 +13,8 @@ console.log(height)
 //* Function to calculate BMI given weight (kg) and height (cm)
 const calculateBmi = () => {
     // Get the weight and height inputs from the DOM & convert it into a number
-    // const weight = Number(weightInput.value);
-    // const height = Number(heightInput.value);
+    const weight = Number(weightInput.value);
+    const height = Number(heightInput.value);
     // console.log(weight)
     // console.log(height)
 
@@ -24,14 +24,16 @@ const calculateBmi = () => {
     // Calculate the BMI and round it to 1 decimal place
     const bmi = weight / (heightm * heightm);
     const roundeBmi = bmi.toFixed(1);
-    
+
     // Set the text of the result element to the calculated BMI
-    result.textContent = roundeBmi;
+    result.innerText = roundeBmi;
 };
+
 
 // Add event listeners to the input fields to trigger the calculateBmi function on input changes
 weightInput.addEventListener('input', calculateBmi);
 heightInput.addEventListener('input', calculateBmi);
+// 'input': This is the name of the event that we are listening for. we are listening for the input event, which is fired whenever the value of the weightInput element changes.
 
 
 
@@ -40,11 +42,3 @@ heightInput.addEventListener('input', calculateBmi);
 
 
 
-// const weight = 70; // kg
-// const height = 170; // cm
-// console.log(calculateBmi(weight, height));
-
-// Calculate the BMI
-// const bmi = calculateBmi();
-
-// update the BMI on DOM & show it to user
