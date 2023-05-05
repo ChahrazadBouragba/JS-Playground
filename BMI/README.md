@@ -30,7 +30,3 @@ The BMI calculator also provides information about whether a user's weight is wi
 The formula used to calculate the BMI is as follows:
 
 BMI = weight (kg) / height (m)^2
-
-## Contributing
-
-If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!
