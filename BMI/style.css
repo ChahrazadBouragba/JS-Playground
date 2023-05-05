@@ -1,0 +1,21 @@
+* {
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+    color: black;
+  }
+  
+  body {
+    background: #97979c;
+  }
+  
+  .wrapper {
+    height: 525px;
+    width: 360px;
+    color: white;
+    background: #ddc27b;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin: 100px auto;
+  }
+.input {
+  display: flex;
+}
