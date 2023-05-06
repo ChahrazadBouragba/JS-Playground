@@ -80,8 +80,6 @@ resetButton.onclick = clearCount;
 
 
 
-
-
 //! calling the function
 onClick()
 
