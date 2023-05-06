@@ -4,11 +4,16 @@
 const weightInput = document.getElementById('weight')
 const heightInput = document.getElementById('height')
 const result = document.getElementById('result')
+const rangeElement = document.getElementById('range');
 
 const weight = Number(weightInput.value);
 const height = Number(heightInput.value);
 console.log(weight)
 console.log(height)
+
+
+
+
 //? BMI = weight (kg) / height (m)²
 //* Function to calculate BMI given weight (kg) and height (cm)
 const calculateBmi = () => {
@@ -18,6 +23,16 @@ const calculateBmi = () => {
     // console.log(weight)
     // console.log(height)
 
+    //* guard clause
+    // if input is 1 or less simply return
+    if (weight <= 1 && height <= 1) {
+        console.log(weight, `weight is 1 or less than 1 so I'm gonna stop`)
+        console.log(height, `height is 1 or less than 1 so I'm gonna stop`)
+        // alert('Enter a valid number')
+        throw 'Enter a valid number'
+        return
+    }
+
     // Convert height from centimeters to meters
     const heightm = height / 100; 
     
@@ -25,9 +40,48 @@ const calculateBmi = () => {
     const bmi = weight / (heightm * heightm);
     const roundeBmi = bmi.toFixed(1);
 
-    // Set the text of the result element to the calculated BMI
-    result.innerText = roundeBmi;
+    // Set the text of the result element to the calculated BMI only happen when the user has entered all the required inputs
+    if (height && weight) {
+      result.innerText = roundeBmi;
+    }
+
+
+    if (bmi < 18.5) {
+        rangeElement.innerText = '(Underweight)';
+      } else if (bmi < 25) {
+        rangeElement.innerText = '(Normal weight)';
+      } else if (bmi < 30) {
+        rangeElement.innerText = '(Overweight)';
+      } else {
+        rangeElement.innerText = '(Obesity)';
+      }
 };
+
+
+
+
+
+
+
+
+
+
+const reloadButton = document.getElementById('reloadButton')
+const reload = () => {
+    weightInput.value = '';
+    heightInput.value = '';
+    result.innerText = '00.0';
+    rangeElement.innerText = '___';
+}
+reloadButton.onclick = reload;
+
+
+
+
+
+
+
+
 
 
 // Add event listeners to the input fields to trigger the calculateBmi function on input changes

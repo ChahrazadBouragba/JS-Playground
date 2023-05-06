@@ -1,21 +1,153 @@
-* {
-    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
-    color: black;
-  }
   
-  body {
+body {
     background: #97979c;
   }
   
-  .wrapper {
+.wrapper {
     height: 525px;
     width: 360px;
-    color: white;
-    background: #ddc27b;
+    background: #e7eaff;
     border-radius: 1rem;
     padding: 1.2rem;
     margin: 100px auto;
   }
-.input {
+
+
+header {
+  /* border: 2px solid red; */
+}
+
+.title {
+  font-family: 'Sigmar', cursive;
+  color: #f490a4;
+  background-color: #e7eaff;
+  /* border: 1px solid gray; */
+  padding-left: 0;
+  font-weight: bolder;
+  border: none;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: 'Sigmar', cursive;
+  margin-top: 0;
+  color: #8d3f7a;
+}
+h5 {
+  margin-top: -24px;
+  margin-left: 60px;
+  font-size: 10.2px;
+  color: #acbac2;
+  font-family: 'Sigmar', cursive;
+}
+
+
+.inputWrapper {
   display: flex;
+  margin-top: 3rem;
+  /* border: 1px solid black; */
+}
+
+input {
+  font-family: 'Vina Sans', cursive;
+  color: #acbac2;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.inputWrapper input {
+  width: 5rem;
+
+  padding: 8px 16px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0px 6px 0px 0;
+  border: none;
+  color: #377D6A;
+  background: white;
+  outline: 0;
+  /* border: 2px solid red; */
+}
+.input1 {
+  margin-right:25px; /* add space between inputs */
+}
+span {
+  width: 30%;
+  padding: 10px 0 10px 7px;
+  font-weight: 400;
+  font-family: 'Sigmar', cursive;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fdc84c;
+  background: white;
+  border: 0;
+  border-radius: 0px 0px 0px 6px;
+  outline: 0;
+  text-indent: 0px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid black; */
+}
+
+::-webkit-input-placeholder {
+  color: #b1bdc5;
+}
+
+.sticker {
+  width: 70%;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: -55px;
+  /* border: 1px solid #8d3f7a; */
+}
+.bmi {
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 4rem;
+  margin-bottom: 1rem;
+  background-color: #f5f5f5;
+}
+.yourBmi {
+  padding-top: 1rem;
+  margin-bottom: 5px;
+  color: ##a7b6bd;
+  font-family: 'Sigmar', cursive;
+  
+}
+
+#result {
+  color: #acbac2;
+  font-family: 'Sigmar', cursive;
+  font-size: 3rem;
+  /* border: 1px solid green; */
+  margin: 0;
+ 
+}
+
+#range {
+  color: #afab34;
+  /* border: 1px solid green; */
+  /* margin-top: -1rem; */
+  font-size: 14px;
+  padding-bottom: 2rem;
+}
+
+footer {
+  /* border: 1px solid #8d3f7a; */
+  display: flex;
+  /* border: 2px solid red;  */
+  justify-content: center;
+  margin-bottom: -rem;
+}
+.actionButton {
+  width: 6.5%;
+  height: 25px;
+  margin-left: 10px;
+  /* border-top: 1px solid #8d3f7a; */
+  margin-top: 0;
+  transition: transform 0.3s ease-in-out;
+}
+.actionButton:hover {
+  transform: scale(1.25);
 }
