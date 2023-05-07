@@ -1,16 +1,176 @@
 body {
-
-}
+    background: whitesmoke;
+  }
+  
 .wrapper {
+    height: 625px;
+    width: 600px;
+    background: #8aa58e;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin: 100px auto;
+  }
 
+.post {
+    background-color: #ffffff;
+    margin: 2rem 3rem;
+    border-radius: 5px;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.right-header {
+    margin-left: 1rem;
+}
+.user-name {
+    /* border: 1px solid gray; */
+    font-size: 18px;
+}
+.date {
+    /* border: 1px solid gray; */
+    font-size: 13px;
+    color: gray;
+    margin-top: -0.7rem;
+}
+
+.left-header {
+    max-width: 18px;
+    max-height: 18px;
+    margin-right: 1.7rem;
+    margin-top: 1.7rem;
+}
+.images {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.image {
+    width: 49.9%;
+    height: 17rem;
+    transition: transform 0.3s ease-in-out;
+}
+.image:hover {
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.text {
+    /* border: 1px solid green; */
+    margin: 0px 2rem 4rem;
+}
+
+
+
+
 
 #reaction-bar {
+    padding-top: 2rem;
     display: flex;
-    border-top: 1px solid black;
+    margin: 0 1rem;
+    border-top: 1px solid #8aa58e;
+}
+.left-footer {
+    margin-left: 9rem;
+    margin-top: -29px;
+    /* border: 1px solid black; */
+}
+.right-footer {
+    margin-top: -22px;
+    /* border: 1px solid #8aa58e; */
 }
 
-img {
-    width: 100px;
-    height: 85px;
+
+
+
+.hidden1 {
+    border: 1px solid black;
+    margin-top: -90px;
+    justify-content: end;
+}
+
+
+.icon-count {
+    margin-right: 20px;
+    padding-left: px;
   }
+.icon-count:last-child {
+    margin-right: 0;
+  }
+
+.hidden2 {
+    margin-left: 6rem;
+    margin-top: -4.4rem;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    /* padding-left: 1px; */
+    width: 28%;
+    position: absolute;
+    display: none;
+}
+.hidden2.show {
+    display: block;
+}
+.reaction {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.reaction:hover {
+    transform: scale(1.25);
+
+}
+.reaction-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* set the span to have a default display property of none. Then, use CSS :hover pseudo-class to show the span when the image is hovered.  */
+  .reaction-wrapper .icon-count {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 2px 9px;
+    z-index: 1;
+    display: none;
+  }
+  
+  .reaction-wrapper:hover .icon-count {
+    display: inline-block;
+  }
+/* END */
+
+
+
+
+.allReactions {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 14.7rem;
+}
+.allReactions:hover {
+    transform: scale(1.25);
+    
+}
+
+.allReactions:hover ~ .hidden2 {
+    display: block;
+}
+
+#resetButton {
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 0.2px auto;
+    transition: transform 0.3s ease-in-out;
+}
+#resetButton:hover {
+    transform: scale(1.25);
+}

@@ -46,8 +46,17 @@ const calculateBmi = () => {
     }
 
 
+
+
+// const imageWeight = document.getElementById('sticker');
+// imageWeight.style.opacity = 0;
+
+
     if (bmi < 18.5) {
-        rangeElement.innerText = '(Underweight)';
+        // const img1 = document.createElement('img')
+        // img1.src="img/save.png"
+        // imageContainer.appendChild(img1)
+        rangeElement.innerText = '(Underweight)'; 
       } else if (bmi < 25) {
         rangeElement.innerText = '(Normal weight)';
       } else if (bmi < 30) {

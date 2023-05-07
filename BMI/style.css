@@ -98,7 +98,11 @@ span {
   margin: 0 auto;
   margin-top: 15px;
   margin-bottom: -55px;
-  /* border: 1px solid #8d3f7a; */
+  /* border: 1px solid red; */
+  transition: transform 0.3s ease-in-out;
+}
+.sticker:hover {
+  transform: scale(1.2);
 }
 .bmi {
   text-align: center;
@@ -151,3 +155,11 @@ footer {
 .actionButton:hover {
   transform: scale(1.25);
 }
+
+
+.hidden {
+  display: none;
+}
+
+
+/*  */

@@ -9,24 +9,72 @@
 </head>
 <body>
     <section class="wrapper">
-            <span id="reaction-count">0</span>
-            
-        <div id="reaction-bar">
-            <img src="img/love.png" class="reaction" alt="love" data-reaction="love" value="love">
-                <span class="icon-count" id="love-icon">0</span>
-            <img src="img/wow.png" class="reaction" alt="wow" data-reaction="wow" value="wow">
-                <span class="icon-count" id="wow-icon">0</span>
-            <img src="img/neutre.png" class="reaction" alt="neutral" data-reaction="neutral" value="neutral">
-                <span class="icon-count" id="neutral-icon">0</span>
-            <img src="img/angry.png" class="reaction" alt="angry" data-reaction="angry" value="angry">
-                <span class="icon-count" id="angry-icon">0</span>
-            <img src="img/timide.png" class="reaction" alt="shy" data-reaction="shy" value="shy">
-                <span class="icon-count" id="shy-icon">0</span>
-            <img src="img/crying.png" class="reaction" alt="crying" data-reaction="crying" value="crying">
-                <span class="icon-count" id="crying-icon">0</span>
-        </div>
 
-        <button id="resetButton">Reset</button>
+        <div class="post">
+            <header>
+                <div class="right-header">
+                    <h2 class="user-name">beljar</h2>
+                    <p class="date">Dec, 26, 2022</p>
+                </div>
+                <img class="left-header" src="img/more.png">
+            </header>
+
+            <section class="images">
+                <img class="image" src="img/tumblr_starynight.jpg">
+                <img class="image" src="img/tumblr_girl.jpg">
+            </section>
+
+            <section class="text">
+               <p>She had a passionate longing for the garden, the darkness, the pure sky, the stars.</p>
+               <p>The Starry Night (1889), painting by Vincent van Gogh // Girl with a Pearl Earring (1665), painting by Johannes Vermeer // text by Anton Chekhov, 'After the Theatre' (1892)</p>
+            </section>
+
+
+        
+            <footer class="reaction-bar" id="reaction-bar">
+
+                <div class="right-footer">
+                <span id="reaction-count">0 notes</span>
+                </div>
+
+                <div class="left-footer">
+                    <img class="allReactions" src="img/allemotion.png">
+
+                    <div class="hidden2">
+                        <div class="reaction-wrapper">
+                          <img src="img/love (1).png" class="reaction" alt="love" data-reaction="love" value="love">
+                          <span class="icon-count" id="love-icon">0</span>
+                        </div>
+                        <div class="reaction-wrapper">
+                          <img src="img/woww.png" class="reaction" alt="wow" data-reaction="wow" value="wow">
+                          <span class="icon-count" id="wow-icon">0</span>
+                        </div>
+                        <div class="reaction-wrapper">
+                          <img src="img/neutral.png" class="reaction" alt="neutral" data-reaction="neutral" value="neutral">
+                          <span class="icon-count" id="neutral-icon">0</span>
+                        </div>
+                        <div class="reaction-wrapper">
+                          <img src="img/angryy.png" class="reaction" alt="angry" data-reaction="angry" value="angry">
+                          <span class="icon-count" id="angry-icon">0</span>
+                        </div>
+                        <div class="reaction-wrapper">
+                          <img src="img/sad.png" class="reaction" alt="crying" data-reaction="crying" value="crying">
+                          <span class="icon-count" id="crying-icon">0</span>
+                        </div>
+                        <div class="reaction-wrapper">
+                          <img src="img/shyy.png" class="reaction" alt="shy" data-reaction="shy" value="shy">
+                          <span class="icon-count" id="shy-icon">0</span>
+                        </div>
+                      </div>
+                      
+
+                </div>
+            </footer>
+
+
+    </div>
+
+        <img src="img/reloading.png" id="resetButton">
     </section>
 
     <script src="reaction.js"></script>

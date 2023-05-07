@@ -5,7 +5,7 @@ const counter = document.getElementById('reaction-count')
 console.log(counter)
 
 // Update its content with the initial count ('')
-counter.innerHTML = '0';
+counter.innerHTML = `0 notes`;
 
 //! listeners icons-count
 const loveIcon = document.getElementById('love-icon')
@@ -34,6 +34,9 @@ const timesClicked = {
 // reactions.forEach(reaction => timesClicked[reaction.getAttribute('data-reaction')] = 0);
 
 
+// Get the .hidden2 element
+const hidden2 = document.querySelector('.hidden2');
+
 //! onclick span
 // create a variable totalClicks to keep track of the total number of clicks across all reactions.
 let totalClicks = 0;
@@ -45,16 +48,44 @@ function onClick() {
         const reactionType = reaction.getAttribute('data-reaction');
         timesClicked[reactionType] += 1 // increase the number of times each reaction is clicked.
         totalClicks += 1
-        counter.innerText = totalClicks //update the counter span element with the number of times each reaction was clicked.
+        counter.innerText = `${totalClicks} notes` //update the counter span element with the number of times each reaction was clicked.
 
         // update the text content of the icon element for the clicked reaction
         const icon = document.getElementById(`${reactionType}-icon`);
-        icon.textContent = `${reactionType}: ${timesClicked[reactionType]}`;
+        icon.textContent = `${timesClicked[reactionType]}`;
         console.log(timesClicked)
         console.log(reactionType)
+
+        // Add the 'show' class to the .hidden2 element (when clicked)
+        hidden2.classList.add('show');
     }
 })
 }
+
+// Get the .allReactions element
+const allReactions = document.querySelector('.allReactions');
+
+// Add a click event listener to the .allReactions element
+allReactions.addEventListener('click', () => {
+    // Add the 'show' class to the .hidden2 element 
+    hidden2.classList.add('show');
+});
+
+// Add a click event listener to the document object
+document.addEventListener("click", (event) => {
+  // Check if the target of the click event is outside the hidden2 element
+  if (!hidden2.contains(event.target) && !allReactions.contains(event.target)) {
+    // Remove the 'show' class from the hidden2 element
+    hidden2.classList.remove("show");
+  }
+});
+
+
+
+
+
+
+
 
 //! Reset
 // define a fuction to clear the count of clicks for all reactions
@@ -62,13 +93,13 @@ const clearCount = () => {
     // reset the number of clicks to zero
     totalClicks = 0;
     // reset the text of counter to zero
-    counter.innerText = 0;
+    counter.innerText = `0 notes`;
 
     //* clear the count of clicks for each icon
     for (let reactionType in timesClicked) {
         timesClicked[reactionType] = 0;
         const icon = document.getElementById(`${reactionType}-icon`);
-        icon.innerText = `${reactionType}: 0`;
+        icon.innerText = `0`;
     }
 }
 
