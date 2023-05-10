@@ -1,12 +1,13 @@
 body {
-    background-color: black;
+    background-color: hsl(35, 80%, 35%);
     height: 100vh;
     color: white;
 }
 
 .section1 {
     background-color: black;
-    height: 80vh;
+    height: 100vh;
+    width: 195.4vh;
     color: aliceblue;
     margin: -0.5rem;
     padding: 0;
@@ -16,21 +17,25 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-image: url('img/background.jpg');
+    background-image: url('img/up-background.jpg');
     position: relative;
-}
-
-.logo {
-    position: absolute;
-    top: 0;
 }
 
 .intro {
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 .text1 {
-    font-size: 29px;
+    font-size: 2.6rem;
+    font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
+    font-weight: 1000;
    
+}
+.text2 {
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
+    font-weight: 540;
+    font-size: 17px;
+    /* font-family: "Circular Bold",plexeina-bold,Helvetica, */
 }
 .inputButtons {
     display: flex;
@@ -38,20 +43,20 @@ body {
 }
 #userInput {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 7px;
     width: 20rem;
     line-height: 30px;
     padding: 0.5rem;
     outline: 0;
     color: inherit;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     /* box-shadow: 0 0 0 2px red, 0 0 0 4px blue; */
 }
 
 #userInput:hover {
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1)
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
 }
 .searchButton {
     height: 2rem;
@@ -63,6 +68,7 @@ body {
     border: none;
     border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.3);
+    
 }
 
 .searchButton:hover {
@@ -94,6 +100,7 @@ body {
     font-size: 15x;
     font-family: 'Heebo', sans-serif;
     font-size: 14px;
+    font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
 }
 .randomHeroButton:hover {
     background-color: #c67c00;
@@ -101,17 +108,122 @@ body {
 }
 
 .section2 {
-    background-color: black;
-    height: 65vh;
+    background-color:hsl(35, 80%, 35%);
+    height: 100vh;
     color: aliceblue;
-    /* margin-top: 1.5rem; */
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
-    /* margin-bottom: -1.5rem; */
-    /* border: 1px solid blue; */
+    margin: 0;
+    padding: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
+.slideHolder {
+    /* border: 1px solid blue; */
+    text-align: center;
+    width: 100vh;
+    height: 60vh;
+    overflow: visible;
+  
+    /* border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+    overflow-x: scroll;
+    /* white-space: nowrap; */
+    padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+    background-color:hsl(35, 80%, 35%);
+    text-align: center;
 
+    margin-right: -10.5rem;
+    margin-top: 6.5rem;
+}
+.slideHolder::after {
+    /* content: ''; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+
+.slideHolder::-webkit-scrollbar {
+    height: 8px; /* height of the scrollbar */
+    width: 8px; /* width of the scrollbar */
+    display: none;
+}
+
+.slideHolder::-webkit-scrollbar-thumb {
+    background-color: #888; /* color of the thumb */
+    border-radius: 10px; /* roundness of the thumb */
+    display: none;
+}
+
+.slideHolder::-webkit-scrollbar-track {
+    background-color: #ddd; /* color of the track */
+    display: none;
+}
+
+.ImageElement {
+    /* border: 5px solid red; */
+    display: flex;
+}
+
+.multipleHeroesImg {
+    height: 330px;
+    width: 220px;
+    border-radius: 20px;
+    margin-left: 1.4rem;
+    transition: transform 0.3s ease;
+}
+.multipleHeroesImg:first-child {
+    margin-left: -0.3rem;
+}
+.multipleHeroesImg:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.lorem {
+    /* border: 5px solid red; */
+    width: 75vh;
+    margin-right: 1px;
+    margin-left: -5rem;
+}
+.titlep{
+    font-size: 2.7rem;
+    font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
+    font-weight: 1000;
+}
+.p {
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
+    /* font-weight: 540; */
+    font-size: 17px;
+    line-height: 1.6rem;
+    text-align: justify;
+    padding-right: 5rem;
+}
+
+/* .rightArrow {
+    width: 5rem;
+    height: 50px;
+    margin-top: 27rem;
+    position: absolute;
+    margin-right: -45rem;
+}
+.leftArrow {
+    width: 5rem;
+    height: 50px;
+    margin-top: 27rem;
+    margin-left: 32rem;
+    margin-right: -30rem;
+    position: absolute;
+} */
+
+
+
+/* PAGE 2 */
 .powerstats {
     border: 1px solid blue;
 }

@@ -2,10 +2,10 @@ console.log('HIIIIIIIIIIIII')
 
 // https://superheroapi.com/api/access-token/character-id
 
-//* API info
 
 //! API call for getting a random Hero
 const getRandomSupperHero = (id, name) => {
+    //* API info
     const SUPERHERO_TOKEN = '189446270644344'
     const BASE_URL = `https://www.superheroapi.com/api.php/${SUPERHERO_TOKEN}`
     
@@ -34,13 +34,86 @@ const getRandomSupperHero = (id, name) => {
     
 }
 
-//! random Hero Button
-const randomHeroButton = document.querySelector('.randomHeroButton')
-
+//! random Hero
+//* function to get a random hero ID
 const randomHero = () => {
     const numberOfHerros = 731
     return Math.floor(Math.random() * numberOfHerros) + 1 // +1 to insure we do not get 0 and get 731 not less
 }
+
+//! SLIDE API CALL
+//* a function to get multiple hero images
+const ImageElement = document.querySelector('.ImageElement');
+const getMultipleHeroes = () => {
+    const numberOfImages = 15; // number of images I want to display
+
+    let imagesHtml = ''; // a string to store HTML for all the images
+    for (let i = 0; i < numberOfImages; i++) {
+        // Generate a random hero ID
+        const heroId = randomHero();
+    
+        // API call to get the hero data
+        fetch(`https://www.superheroapi.com/api.php/189446270644344/${heroId}`)
+        .then(Response => Response.json()) // Convert the response to JSON
+        .then(json => {
+            console.log(json);
+            // Check if the hero data was returned successfully
+            if (!json) {
+                throw new Error(`Hero with ID ${heroId} not found`);
+            }
+
+            // Add the HTML for the image to the imagesHtml string
+            imagesHtml += `<img class='multipleHeroesImg' src="${json.image.url} "data-id="${json.id}"/>`;
+            // If we have processed all the images, update the ImageElement with the concatenated HTML
+            if (i === numberOfImages - 1) {
+                ImageElement.innerHTML = imagesHtml;
+            }
+
+    // Add event listener to each image
+    const multipleHeroesImgElements = document.querySelectorAll('.multipleHeroesImg');
+    console.log(multipleHeroesImgElements)
+    multipleHeroesImgElements.forEach(imgElement => {
+        imgElement.addEventListener('click', (event) => {
+            const heroId = event.target.getAttribute('data-id');
+            consol.log(heroId)
+            const queryParams = new URLSearchParams({ heroId: heroId });
+            window.location.href = `./hero.html?${queryParams.toString()}`;
+        });
+    });
+
+            
+        })
+
+        .catch(error => {
+            console.error(error.message);
+            ImageElement.innerHTML = '';
+        });
+
+    }  
+}
+
+//! CALLING the function that is displaying the slide
+window.onload = () => getMultipleHeroes(randomHero())
+
+// //! MAKING THE SLIDE CLICKABLE
+
+const multipleHeroesImgElements = document.querySelectorAll('.multipleHeroesImg');
+multipleHeroesImgElements.onclick = (event) => {
+    event.preventDefault(); // Prevent form submission
+    const imageClick = getMultipleHeroes(randomHero())
+    const queryParams = new URLSearchParams({ heroId: imageClick });
+    window.location.href = `./hero.html?${queryParams.toString()}`;
+  };
+
+
+
+
+
+
+
+
+//! random Hero Button
+const randomHeroButton = document.querySelector('.randomHeroButton')
 
 randomHeroButton.onclick = () => {
     const randomId = randomHero();
@@ -202,5 +275,6 @@ const SearchHero = (name) => {
     const queryParams = new URLSearchParams({ heroName: userInputValue });
     window.location.href = `./hero.html?${queryParams.toString()}`;
   };
+
 
 
