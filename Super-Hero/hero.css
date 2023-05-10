@@ -1,0 +1,149 @@
+/* PAGE 2 */
+
+body {
+    background-color: #a16512;
+    color: white;
+    display: flex;
+}
+
+.hidden {
+    background-color: #69420C;
+    border-radius: 20px;
+    margin-left: 8.6rem;
+    margin-top: 0.7rem;
+}
+
+.heroImg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10rem;
+    width: 50vh;
+    height: 50vh;
+}
+.backgroundImg {
+    height: 40vh;
+    width: 194vh;
+    position: absolute;
+    z-index: 0;
+    /* set the top and left properties to position the image behind the input */
+    top: 0;
+    left: 0;
+    filter: contrast(60%);
+}
+.heroNameElemente {
+    /* border: 1px solid black; */
+    position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.herroImageElement {
+    padding-top: 3rem;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.line {
+    border-top: 1px solid white;  
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border-bottom: -3rem;
+}
+.heroInfoElement {
+    margin-top: 5rem;
+    /* border: 2px solid blueviolet; */
+    width: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding-right: 2.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    /* prevent flex container from shrinking this element*/
+    flex-shrink: 0;
+    color: black;
+}
+.aside {
+    margin-left: 1rem;
+    background-color: rgba(105, 66, 12, 0.7);
+    border-radius: 20px;
+    width: 20rem;
+    margin-bottom: 33rem;
+    margin-top: 0.7rem;
+}
+h1 {
+    font-size: 2.6rem;
+    font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
+    font-weight: 1000;
+}
+.asideText {
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
+    font-weight: 540;
+    font-size: 13.7px;
+    line-height: 1.3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    color: rgb(255, 255, 255, 0.7);
+    margin-bottom: 1.3rem;
+    text-align: justify;
+}
+.asideText:last-child {
+    margin-top: 0;
+}
+
+.section2{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    margin-top: -4rem;
+}
+.row1, .row2 {
+    background-color: white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: -20rem;
+    /* width: 70%; */
+    /* border: 2px solid black; */
+
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+.row1 {
+    grid-row: 1;
+}
+.row2 {
+    grid-row: 2;
+}
+
+
+h4 {
+    font-size: 1.3rem;
+    font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
+    font-weight: 1000;
+    margin-left: 2rem;
+}
+li {
+    list-style: none;
+    text-transform: lowercase;
+    font-family: Gotham Rounded SSm,Arial,sans-serif;
+    font-weight: 570;
+    font-size: 15px;
+    line-height: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+}
+li::first-letter {
+    text-transform: uppercase;
+  }
+
+
+
+
+  .map {
+    width: 18rem;
+    height: 21rem;
+    border: 0;
+    border-radius: 20px;
+    margin-left: 1rem;
+  }

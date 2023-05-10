@@ -20,7 +20,7 @@ const getRandomSupperHero = (id, name) => {
             throw new Error(`Hero with name ${name} not found`);
         }
         heroName.innerText = `${json.name}`;
-       herroImage.innerHTML = `<img src="${json.image.url}" height=200 width=200/>`
+       herroImage.innerHTML = `<img class='heroImg' src="${json.image.url}" height=200 width=200/>`
        //* get heroe info
        heroInfo.innerHTML = getHeroInfo(json);
     })
@@ -136,11 +136,6 @@ randomHeroButton.onclick = () => {
  //? name: base_url/search/(name)
  //* json.result[0].image.url
 
- //? Add an event listener to the input element to log its value whenever it changes
-// userInput.addEventListener('input', () => {
-//     console.log(userInput.value);
-//   });
-
 
 //! Get heros info
 //* represents a list of each powerstat and its value as a list
@@ -182,10 +177,6 @@ const getHeroInfo = (character) => {
         ...Object.entries(character.connections).map(([connections, value]) => `<li class="connections" title="connections">${connections.toUpperCase()}: ${value}</li>`),
         "</ul>",
     ];
-
-    // const GetHeroInfoo = getHeroInfo();
-    // const queryParams = new URLSearchParams({ userInputValue: GetHeroInfoo });
-    // window.location.href = `./hero.html?${queryParams.toString()}`;
 
     // join the array elements into a single string
     return statsHTML.join("") + bioHTML.join("") + appearHTML.join("") + workHTML.join("") + connectHTML.join("");
@@ -262,11 +253,24 @@ const SearchHero = (name) => {
 }
 
  
+const searchButton = document.querySelector('.searchButton')
 
+ //? Add an event listener to the input element to log its value whenever it changes
+// userInput.addEventListener('input', () => {
+//     console.log(userInput.value);
+//   });
+//! disable the search button untill there is an input
+//* button disabled in HTML
+userInput.addEventListener("input", () => {
+    if (userInput.value.trim() !== "") {
+      searchButton.removeAttribute("disabled");
+    } else {
+      searchButton.setAttribute("disabled", true);
+    }
+  });
 
 
  //! Search Button
- const searchButton = document.querySelector('.searchButton')
 
  searchButton.onclick = (event) => {
     event.preventDefault(); // Prevent form submission

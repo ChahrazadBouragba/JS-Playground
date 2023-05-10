@@ -19,38 +19,38 @@ const getHeroInfo = (character) => {
   // create an array to store the HTML
   let statsHTML = [
       //* using the spread operator (...) and Object.entries() to map over the properties of each object and convert them to an array of HTML list items.
-      "<h4 class='title'> POWERSTATS:</h4>",
-      "<ul>",
+      "<div class='row1'>",
+      "<h4 class='title'> Powerstats</h4>",
       ...Object.entries(character.powerstats).map(([stat, value]) => `<li class="powerstats" title="powerstats">${stat.toUpperCase()}: ${value}</li>`),
-      "</ul>",
-  ];
- 
-  let bioHTML = [
-      "<h4 class='title'> biography:</h4>",
-      "<ul>",
-      ...Object.entries(character.biography).map(([bio, value]) => `<li class="biography" title="biography">${bio.toUpperCase()}: ${value}</li>`),
-      "</ul>",
+      "</div>",
   ];
 
   let appearHTML = [
-      "<h4 class='title'> appearance:</h4>",
-      "<ul>",
+    "<div class='row2'>",
+      "<h4 class='title'> Appearance</h4>",
       ...Object.entries(character.appearance).map(([appear, value]) => `<li class="appearance" title="appearance">${appear.toUpperCase()}: ${value}</li>`),
-      "</ul>",
+      "</div>",
+  ];
+ 
+  let bioHTML = [
+    "<div class='row1'>",
+      "<h4 class='title'> Biography</h4>",
+      ...Object.entries(character.biography).map(([bio, value]) => `<li class="biography" title="biography">${bio.toUpperCase()}: ${value}</li>`),
+      "</div>",
   ];
 
   let workHTML = [
-      "<h4 class='title'> work:</h4>",
-      "<ul>",
+    "<div class='row2'>",
+      "<h4 class='title'> Work</h4>",
       ...Object.entries(character.work).map(([work, value]) => `<li class="work" title="work">${work.toUpperCase()}: ${value}</li>`),
-      "</ul>",
+      "</div>",
   ];
 
   let connectHTML = [
-      "<h4 class='title'> connections:</h4>",
-      "<ul>",
+    "<div class='row2'>",
+      "<h4 class='title'> Connections</h4>",
       ...Object.entries(character.connections).map(([connections, value]) => `<li class="connections" title="connections">${connections.toUpperCase()}: ${value}</li>`),
-      "</ul>",
+      "</div>",
   ];
 
   // const GetHeroInfoo = getHeroInfo();
@@ -58,7 +58,7 @@ const getHeroInfo = (character) => {
   // window.location.href = `./hero.html?${queryParams.toString()}`;
 
   // join the array elements into a single string
-  return statsHTML.join("") + bioHTML.join("") + appearHTML.join("") + workHTML.join("") + connectHTML.join("");
+  return statsHTML.join("") + appearHTML.join("") + bioHTML.join("") + workHTML.join("");
   
 }
 
@@ -76,7 +76,7 @@ if (heroName) {
 
       // Display hero information
       heroNameElement.innerText = specificHero.name;
-      herroImageElement.innerHTML = `<img src="${specificHero.image.url}" height="200" width="200"/>`;
+      herroImageElement.innerHTML = `<img class='heroImg' src="${specificHero.image.url}"/>`;
       heroInfoElement.innerHTML = getHeroInfo(specificHero);
     })
     .catch(error => {
@@ -96,7 +96,7 @@ if (heroName) {
 
       // Display hero information
       heroNameElement.innerText = json.name;
-      herroImageElement.innerHTML = `<img src="${json.image.url}" height="200" width="200"/>`;
+      herroImageElement.innerHTML = `<img class='heroImg' src="${json.image.url}"/>`;
       heroInfoElement.innerHTML = getHeroInfo(json);
     })
     .catch(error => {

@@ -50,13 +50,14 @@ body {
     padding: 0.5rem;
     outline: 0;
     color: inherit;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     /* box-shadow: 0 0 0 2px red, 0 0 0 4px blue; */
 }
 
 #userInput:hover {
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .searchButton {
     height: 2rem;
@@ -131,14 +132,14 @@ body {
   
     /* border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
-    overflow-x: scroll;
+    overflow-x: scroll; /*slide*/
     /* white-space: nowrap; */
     padding: 0.8rem 0.8rem 0.4rem 0.8rem;
     background-color:hsl(35, 80%, 35%);
     text-align: center;
 
     margin-right: -10.5rem;
-    margin-top: 6.5rem;
+    margin-top: -2rem;
 }
 .slideHolder::after {
     /* content: ''; */
@@ -149,25 +150,28 @@ body {
 }
 
 .slideHolder::-webkit-scrollbar {
-    height: 8px; /* height of the scrollbar */
-    width: 8px; /* width of the scrollbar */
-    display: none;
+    height: 7px; /* height of the scrollbar */
+    width: 7px; /* width of the scrollbar */
+    /* border: 1px solid  rgba(0, 0, 0, 0.3); */
+    /* display: none; */
 }
 
 .slideHolder::-webkit-scrollbar-thumb {
-    background-color: #888; /* color of the thumb */
+    background-color: rgb(255, 255, 255, 0.2); /* color of the thumb */
     border-radius: 10px; /* roundness of the thumb */
-    display: none;
+    /* display: none; */
 }
-
+.slideHolder::-webkit-scrollbar-thumb:hover {
+    background-color: white;
+}
 .slideHolder::-webkit-scrollbar-track {
     background-color: #ddd; /* color of the track */
     display: none;
 }
 
 .ImageElement {
-    /* border: 5px solid red; */
     display: flex;
+    margin-top: 4rem;
 }
 
 .multipleHeroesImg {
@@ -176,13 +180,15 @@ body {
     border-radius: 20px;
     margin-left: 1.4rem;
     transition: transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.6);
 }
 .multipleHeroesImg:first-child {
-    margin-left: -0.3rem;
+    margin-left: -0.6rem;
 }
 .multipleHeroesImg:hover {
     transform: scale(1.04);
     cursor: pointer;
+    /* box-shadow: 0 0 0 2px rgba(255, 255, 255, 1); */
 }
 
 .lorem {
@@ -205,7 +211,7 @@ body {
     padding-right: 5rem;
 }
 
-/* .rightArrow {
+.rightArrow {
     width: 5rem;
     height: 50px;
     margin-top: 27rem;
@@ -217,20 +223,8 @@ body {
     height: 50px;
     margin-top: 27rem;
     margin-left: 32rem;
-    margin-right: -30rem;
+    /* margin-right: -30rem; */
     position: absolute;
-} */
-
-
-
-/* PAGE 2 */
-.powerstats {
-    border: 1px solid blue;
 }
 
-.title {
-    background-color: blue;
-}
-.heroInfo {
-    display: flex;
-}
+
