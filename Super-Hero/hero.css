@@ -7,18 +7,25 @@ body {
 }
 
 .hidden {
-    background-color: #69420C;
+    background-color: rgba(105, 66, 12, 0.6);
     border-radius: 20px;
     margin-left: 8.6rem;
     margin-top: 0.7rem;
+    margin-bottom: 19rem;
 }
 
 .heroImg {
     display: block;
     margin: 0 auto;
-    border-radius: 10rem;
-    width: 50vh;
-    height: 50vh;
+    border-radius: 5rem;
+    width: 32vh;
+    height: 32vh;
+    transition: transform 0.3s ease;
+}
+.heroImg:hover {
+    transform: scale(1.09);
+    border-radius: 2rem;
+    cursor: pointer;
 }
 .backgroundImg {
     height: 40vh;
@@ -34,7 +41,8 @@ body {
     /* border: 1px solid black; */
     position: relative;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-top: 15px;
+    margin-bottom: 3rem;
 }
 .herroImageElement {
     padding-top: 3rem;
@@ -42,7 +50,7 @@ body {
     position: relative;
 }
 .line {
-    border-top: 1px solid white;  
+    border-top: 0.1px solid rgb(255, 255, 255, 0.4);  
     margin-left: 5rem;
     margin-right: 5rem;
     border-bottom: -3rem;
@@ -52,28 +60,28 @@ body {
     /* border: 2px solid blueviolet; */
     width: 40rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: repeat(2, 1fr); */
     padding-right: 2.5rem;
     padding-left: 1.5rem;
     padding-bottom: 0.5rem;
 
     /* prevent flex container from shrinking this element*/
     flex-shrink: 0;
-    color: black;
 }
 .aside {
     margin-left: 1rem;
     background-color: rgba(105, 66, 12, 0.7);
     border-radius: 20px;
     width: 20rem;
-    margin-bottom: 33rem;
+    margin-bottom: 32rem;
     margin-top: 0.7rem;
 }
 h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
     font-weight: 1000;
+    color: rgb(255, 255, 255, 0.9);
 }
 .asideText {
     font-family: Gotham Rounded SSm,Arial,sans-serif;
@@ -98,7 +106,7 @@ h1 {
     margin-top: -4rem;
 }
 .row1, .row2 {
-    background-color: white;
+    background-color: rgba(105, 66, 12, 0.7);
     border-radius: 20px;
     padding-bottom: 20px;
     margin-left: 1rem;
@@ -106,8 +114,16 @@ h1 {
     padding: -20rem;
     /* width: 70%; */
     /* border: 2px solid black; */
+}
+.row2:hover {
+    /* box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); */
+    transform: scale(1.02);
+    cursor: pointer;
+}
 
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+.row1:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 .row1 {
     grid-row: 1;
@@ -118,20 +134,22 @@ h1 {
 
 
 h4 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
     font-weight: 1000;
     margin-left: 2rem;
+    color: rgb(255, 255, 255, 0.3)
 }
 li {
     list-style: none;
     text-transform: lowercase;
     font-family: Gotham Rounded SSm,Arial,sans-serif;
     font-weight: 570;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.5rem;
     margin-left: 2rem;
     margin-right: 1.5rem;
+    color: rgb(255, 255, 255, 0.7)
 }
 li::first-letter {
     text-transform: uppercase;

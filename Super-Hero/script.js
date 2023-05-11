@@ -95,6 +95,8 @@ const getMultipleHeroes = () => {
 //! CALLING the function that is displaying the slide
 window.onload = () => getMultipleHeroes(randomHero())
 
+
+
 // //! MAKING THE SLIDE CLICKABLE
 
 const multipleHeroesImgElements = document.querySelectorAll('.multipleHeroesImg');
