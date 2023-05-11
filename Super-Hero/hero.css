@@ -8,11 +8,11 @@ body {
 
 .hidden {
     /* background-color: #69420C; */
-    background-color: rgb(255, 255, 255, 0.1);
+    /* background-color: rgb(255, 255, 255, 0.1); */
     border-radius: 20px;
-    margin-left: 8.6rem;
-    margin-top: 0.7rem;
-    margin-bottom: 19rem;
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    /* padding-bottom: -30rem; */
 }
 
 .heroImg {
@@ -58,27 +58,15 @@ body {
     margin-right: 5rem;
     border-bottom: -3rem;
 }
-.heroInfoElement {
-    margin-top: 5rem;
-    /* border: 2px solid blueviolet; */
-    width: 40rem;
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    /* grid-template-rows: repeat(2, 1fr); */
-    padding-right: 2.5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 0.5rem;
 
-    /* prevent flex container from shrinking this element*/
-    flex-shrink: 0;
-}
 .aside {
-    margin-left: 1rem;
+    margin-right: 2rem;
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 20px;
-    width: 20rem;
+    width: 30rem;
     margin-bottom: 32rem;
-    margin-top: 0.7rem;
+    margin-top: 5rem;
+    margin-left: -1.5rem;
 }
 h1 {
     font-size: 2.4rem;
@@ -89,7 +77,7 @@ h1 {
 .asideText {
     font-family: Gotham Rounded SSm,Arial,sans-serif;
     font-weight: 540;
-    font-size: 13.7px;
+    font-size: 13.2px;
     line-height: 1.3rem;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -107,6 +95,23 @@ h1 {
     display: flex;
     flex-direction: row;
     margin-top: -4rem;
+    margin-bottom: -10rem;
+
+}
+.heroInfoElement {
+    margin-top: 5rem;
+    /* border: 2px solid blueviolet; */
+    /* manipulationg rows/boxes height */
+    width: 33rem;
+    height: 50vh;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: repeat(2, 1fr); */
+    padding-right: 2.5rem;
+    padding-left: 1.5rem;
+ 
+    /* prevent flex container from shrinking this element*/
+    flex-shrink: 0;
 }
 .row1, .row2 {
     background-color: rgb(255, 255, 255, 0.1);
@@ -141,7 +146,8 @@ h4 {
     font-family: "Circular Bold",plexeina-bold,Helvetica,sans-serif;
     font-weight: 1000;
     margin-left: 2rem;
-    color: rgb(255, 255, 255, 0.3)
+    color: rgb(255, 255, 255, 0.3);
+    padding-right: 4rem;
 }
 li {
     list-style: none;
@@ -162,9 +168,10 @@ li::first-letter {
 
 
   .map {
-    width: 18rem;
-    height: 21rem;
+    width: 27rem;
+    height: 16.3rem;
     border: 0;
     border-radius: 20px;
-    margin-left: 1rem;
+    margin-left: 1.4rem;
+    margin-bottom: 16px;
   }
