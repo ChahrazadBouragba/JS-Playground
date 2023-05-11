@@ -1,13 +1,14 @@
 /* PAGE 2 */
 
 body {
-    background-color: #a16512;
+    background-color: black;
     color: white;
     display: flex;
 }
 
 .hidden {
-    background-color: rgba(105, 66, 12, 0.6);
+    /* background-color: #69420C; */
+    background-color: rgb(255, 255, 255, 0.1);
     border-radius: 20px;
     margin-left: 8.6rem;
     margin-top: 0.7rem;
@@ -21,7 +22,9 @@ body {
     width: 32vh;
     height: 32vh;
     transition: transform 0.3s ease;
+    filter: brightness(60%);
 }
+
 .heroImg:hover {
     transform: scale(1.09);
     border-radius: 2rem;
@@ -71,7 +74,7 @@ body {
 }
 .aside {
     margin-left: 1rem;
-    background-color: rgba(105, 66, 12, 0.7);
+    background-color: rgb(255, 255, 255, 0.1);
     border-radius: 20px;
     width: 20rem;
     margin-bottom: 32rem;
@@ -106,7 +109,7 @@ h1 {
     margin-top: -4rem;
 }
 .row1, .row2 {
-    background-color: rgba(105, 66, 12, 0.7);
+    background-color: rgb(255, 255, 255, 0.1);
     border-radius: 20px;
     padding-bottom: 20px;
     margin-left: 1rem;
