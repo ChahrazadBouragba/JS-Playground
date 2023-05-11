@@ -1,0 +1,22 @@
+body {
+    background-image: url(./tumblr.jpg);
+}
+button {
+    display: block;
+    margin: 8rem 29rem;
+    font-size: 1rem;
+	border: none;
+	padding: 1rem 1rem;
+	border-radius: 100px;
+	background-color: #c9b0ad;
+}
+#cart-status {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: aliceblue;
+    margin: 8rem 27rem;
+    display: block;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    width: 10%;
+}
