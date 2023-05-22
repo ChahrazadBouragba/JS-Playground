@@ -5,10 +5,20 @@ body {
     color: white;
 }
 
+:root {
+    --background-color: white;
+    --text-color: black;
+  }
+  
+.dark-mode {
+    --background-color: black;
+    --text-color: white;
+  }
+
 .section1 {
     background-color: black;
     height: 100vh;
-    width: 195.4vh;
+    width: 192vh;
     color: aliceblue;
     margin: -0.5rem;
     padding: 0;
@@ -122,8 +132,8 @@ body {
     color: aliceblue;
     margin: 0;
     padding: 0;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    /* margin-left: -1rem;
+    margin-right: -1rem; */
  
     display: flex;
     flex-direction: row;
@@ -147,7 +157,7 @@ body {
     background-color:black;
     text-align: center;
 
-    margin-right: -10.5rem;
+    margin-right: -9rem;
     margin-top: -2rem;
 }
 .slideHolder::after {
@@ -196,7 +206,7 @@ body {
     margin-left: -0.6rem;
 }
 .multipleHeroesImg:hover {
-    transform: scale(1.04);
+    transform: scale(1.06);
     cursor: pointer;
     /* box-shadow: 0 0 0 2px rgba(255, 255, 255, 1); */
 }
@@ -221,7 +231,9 @@ body {
     padding-right: 5rem;
 }
 
-.rightArrow {
+
+
+/* .rightArrow {
     width: 5rem;
     height: 50px;
     margin-top: 27rem;
@@ -233,8 +245,7 @@ body {
     height: 50px;
     margin-top: 27rem;
     margin-left: 32rem;
-    /* margin-right: -30rem; */
     position: absolute;
-}
+} */
 
 
