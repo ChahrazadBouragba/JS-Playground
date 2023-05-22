@@ -1,3 +1,16 @@
+
+const toggleSwitch = document.querySelector('#toggle');
+const body = document.querySelector('body');
+
+toggleSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+});
+
+
 const SUPERHERO_TOKEN = '189446270644344'
     const BASE_URL = `https://www.superheroapi.com/api.php/${SUPERHERO_TOKEN}`
     

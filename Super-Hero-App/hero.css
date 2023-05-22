@@ -175,3 +175,81 @@ li::first-letter {
     margin-left: 1.4rem;
     margin-bottom: 16px;
   }
+
+
+
+  /* TOGGLE BOTTON */
+
+.toggleButton {
+    position: absolute;
+    margin-top: -0.5rem;
+    margin-left: 78.3rem;
+}
+
+input[type="checkbox"]{
+	visibility: hidden;
+	&:checked + label {
+		/* transform: rotate(360deg); */
+		background-color: rgba(255, 255, 255, 0.3);
+		&:before {
+			transform: translateX(22px);
+			background-color: black;
+		}
+	}
+}
+
+
+
+label {
+	display: flex;
+	width: 63px;
+	height: 37px;
+	border-radius: 99em;
+	position: relative;
+    cursor: pointer;
+	transition: transform .75s ease-in-out;
+	transform-origin: 50% 50%;
+	cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &:before {
+		transition: transform .7s ease-in-out;
+		transition-delay: .1s;
+		content: "";
+		display: block;
+		position: absolute;
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		top: 4px;
+		left: 7px;
+	}
+}
+
+/* END */
+
+/* Light mode styles */
+body {
+    background-color: #69420C;
+    color: #000000; 
+    transition: background-color 0.7s ease-out;
+  }
+  
+  .toggleButton label:before {
+    background-color: white; 
+  }
+  
+  .toggleButton label {
+    border-color: #000000; 
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #000000; 
+    color: #FFFFFF; 
+    transition: background-color 0.5s ease-out;
+  }
+  
+  /* .toggleButton */
+
+/* END */

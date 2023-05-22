@@ -1,5 +1,41 @@
 console.log('HIIIIIIIIIIIII')
 
+
+
+
+//! the dark mode/light mode toggle
+
+const toggleSwitch = document.querySelector('#toggle');
+const body = document.querySelector('body');
+
+toggleSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // https://superheroapi.com/api/access-token/character-id
 
 
