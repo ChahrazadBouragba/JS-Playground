@@ -1,4 +1,6 @@
 
+//! TOGGLE BUTTON
+
 const toggleSwitch = document.querySelector('#toggle');
 const body = document.querySelector('body');
 
@@ -9,6 +11,34 @@ toggleSwitch.addEventListener('change', function() {
     body.classList.remove('dark-mode');
   }
 });
+
+
+
+
+
+//! LOADING SMOTHLY
+
+// window.addEventListener('load', function() {
+//   const images = document.querySelectorAll('body');
+//   images.forEach(function(img) {
+//     img.setAttribute('src', img.getAttribute('data-src'));
+//     img.onload = function() {
+//       img.removeAttribute('data-src');
+//     };
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const SUPERHERO_TOKEN = '189446270644344'
