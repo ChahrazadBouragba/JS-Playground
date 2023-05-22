@@ -195,8 +195,9 @@ body {
     border-radius: 20px;
     margin-left: 1.4rem;
     transition: transform 0.3s ease;
-    border: 1px solid white;
+    border: 2px solid white;
     filter: brightness(50%);
+    z-index: 1;
 }
 .multipleHeroesImg:first-child {
     margin-left: -0.6rem;
