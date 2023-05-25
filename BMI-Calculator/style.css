@@ -13,10 +13,6 @@ body {
   }
 
 
-header {
-  /* border: 2px solid red; */
-}
-
 .title {
   font-family: 'Sigmar', cursive;
   color: #f490a4;
@@ -91,13 +87,18 @@ span {
   color: #b1bdc5;
 }
 
+#sticker-container {
+  /* border: 2px solid red; */
+  margin-bottom: -55px;
+}
+
 .sticker {
   width: 70%;
   height: 150px;
   display: block;
   margin: 0 auto;
   margin-top: 15px;
-  margin-bottom: -55px;
+  /* margin-bottom: -55px; */
   /* border: 1px solid red; */
   transition: transform 0.3s ease-in-out;
 }
@@ -133,7 +134,7 @@ span {
   color: #afab34;
   /* border: 1px solid green; */
   /* margin-top: -1rem; */
-  font-size: 14px;
+  font-size: 20px;
   padding-bottom: 2rem;
 }
 
@@ -161,5 +162,3 @@ footer {
   display: none;
 }
 
-
-/*  */
