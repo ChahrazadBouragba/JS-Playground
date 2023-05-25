@@ -1,6 +1,7 @@
 # BMI Calculator
 
-[Demo Video](https://www.tiktok.com/@chahrazad.bouragba/video/7236468598926019845?is_from_webapp=1&sender_device=pc&web_id=7234606889534129665)
+[![Demo Video](https://www.tiktok.com/@chahrazad.bouragba/video/7236468598926019845?is_from_webapp=1&sender_device=pc](https://www.tiktok.com/@chahrazad.bouragba/video/7236468598926019845?is_from_webapp=1&sender_device=pc)
+
 
 This is a simple BMI calculator that calculates a user's Body Mass Index (BMI) based on their weight and height inputs. The calculator also provides information about whether the user's weight is within a healthy range.
 
